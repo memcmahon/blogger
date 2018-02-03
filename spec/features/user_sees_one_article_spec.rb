@@ -29,9 +29,10 @@ describe "user sees a sigle article" do
 
       fill_in "comment[author_name]", with: "ME!"
       fill_in "comment[body]", with: "So many thoughts on this article."
-      click_on "Submit"
+      click_on "Create Comment"
 
       expect(current_path).to eq(article_path(article))
+      expect(page).to have_content("Comments (1)")
       expect(page).to have_content("Post a Comment")
       expect(page).to have_content("ME!")
       expect(page).to have_content("So many thoughts on this article.")
