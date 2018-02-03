@@ -33,6 +33,8 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
 
+    flash.notice = "Article Deleted!"
+    
     redirect_to articles_path
   end
 

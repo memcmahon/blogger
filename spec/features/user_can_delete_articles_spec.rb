@@ -9,6 +9,8 @@ describe "user can delete articles" do
       visit article_path(article_1)
       click_link "Delete"
 
+      expect(page).to have_content("Article Deleted!")
+
       expect(current_path).to eq(articles_path)
       expect(page).to have_content("Title 2")
       expect(page).to_not have_content("Title 1")
