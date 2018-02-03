@@ -13,7 +13,6 @@ describe "user creates a new article" do
         fill_in "article[body]", with: "New Body!"
         click_on "Create Article"
 
-        # expect(current_path).to eq(show_article_path)
         expect(page).to have_content("New Title!")
         expect(page).to have_content("New Body!")
       end
