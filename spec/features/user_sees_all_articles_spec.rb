@@ -8,10 +8,9 @@ describe "user seels all articles" do
 
       visit '/articles'
 
-      expect(page).to have_content("Title 1")
-      expect(page).to have_content("Title 2")
-      expect(page).to have_content("Body 1")
-      expect(page).to have_content("Body 2")
+      expect(page).to have_link("Title 1")
+      expect(page).to have_link("Title 2")
+      expect(page).to have_link("New Article")
     end
   end
 end
