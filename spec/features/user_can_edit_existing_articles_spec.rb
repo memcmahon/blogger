@@ -22,7 +22,7 @@ describe "user can edit an article" do
       fill_in "article[body]", with: "Edited Body!"
       click_on "Update Article"
 
-      expect(page).to have_content("Article Edited Title! was updated")
+      expect(page).to have_content("Article 'Edited Title!' Updated!")
 
       expect(current_path).to eq(article_path(article_1))
       expect(page).to have_content("Edited Title!")
